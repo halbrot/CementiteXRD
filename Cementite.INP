@@ -15,6 +15,7 @@ RAW(FileName)
 	r_exp 4.500861516 r_exp_dash 10.78076103 r_wp 3.653259415 r_wp_dash 8.750528451 r_p 2.838771042 r_p_dash 9.994006066 weighted_Durbin_Watson 0.2896156233 gof 0.811680031
 	range 1
 	bkg @ 363.8604533 164.0359948 41.90768637 -11.18367241 3.100411064 -3.504508345 -0.08276444532
+	Specimen_Displacement(Disp, 0.495638439)
 	Rp 280
 	Rs 280
 		User_Defined_Dependence_Convolution(lor_fwhm, , , 0.03586997)
