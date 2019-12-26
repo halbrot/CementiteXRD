@@ -27,7 +27,7 @@ RAW(FileName)
 		la  0.0503 lo  1.789879 lh  1
 		la  0.3516 lo  1.79285 lh  1
 	str 
-		LVol_FWHM_CS_G_L( 1, 4871.190388, 0.89, 6809.966692,,,cs_iron_gamma_austenite, 7651.647969_LIMIT_MIN_0.3)
+		LVol_FWHM_CS_G_L( 1, 4871.190388, 0.89, 6809.966692,,,CS_austenite, 7651.647969_LIMIT_MIN_0.3)
 		e0_from_Strain( 0.003439538823,@, 1.576568464,,)
 		r_bragg  1.461518742
 		phase_MAC 56.51577148
@@ -43,7 +43,7 @@ RAW(FileName)
 		site s1 num_posns 4 x =0; :  0 y =0; :  0 z =0; :  0 occ FE  0.950000127 beq  0.1 occ C  0.04999987304_LIMIT_MAX_0.05 max =0.05; beq  0.1
 		PO_Spherical_Harmonics(sh_54364b03_38, 4 load sh_Cij_prm { k00 !sh_54364b03_38_c00 1 k41 sh_54364b03_38_c41 -0.1289674167 } )
 	str 
-		LVol_FWHM_CS_G_L( 1, 16.89871825, 0.89, 23.62455566,,,@, 26.54444456_LIMIT_MIN_20 min =20; max =200;)
+		LVol_FWHM_CS_G_L( 1, 16.89871825, 0.89, 23.62455566,,,CS_Cementite, 26.54444456_LIMIT_MIN_20 min =20; max =200;)
 		r_bragg  1.491735505
 		phase_MAC 53.72935082
 		Apply_Brindley_Spherical_R_PD( 1e-005, 0.4)
@@ -61,7 +61,7 @@ RAW(FileName)
 		site Fe2 num_posns 4 x  0.036 y =1/4; :  0.25 z  0.852 occ Fe  1 beq  0.1
 		site C1 num_posns 4 x  0.89 y =1/4; :  0.25 z  0.45 occ C  1 beq  0.1
 	str 
-		LVol_FWHM_CS_G_L( 1, 18.06464877, 0.89, 25.25453669,,,@, 28.37588393 min =1; max =100;)
+		LVol_FWHM_CS_G_L( 1, 18.06464877, 0.89, 25.25453669,,,CS_Martensite, 28.37588393 min =1; max =100;)
 		e0_from_Strain( 0.002731154746,@, 1.251869121,,)
 		r_bragg  0.6022322944
 		phase_MAC 56.86142654
@@ -77,6 +77,10 @@ RAW(FileName)
 		site Fe1 num_posns 2 x  0 y  0 z  0 occ Fe  1 beq  0.5
 		site C num_posns 2 x !o 0.5 y !o 0.5 z  0 occ C  0.02 beq  0.5
 		PO_Two_Directions(@, 0.8006097163,, 1 1 0,@, 0.4873017138,, 0 1 1,@, 0.5876350669)
-Out(wt_austenite, "%6.2f", "	%5.2f") 
+Out(wt_austenite, "%6.2f", "	%5.2f")
+Out(CS_austenite, "	%6.2f", "	%5.2f") 
 Out(wt_cementite, "	%6.2f", "	%5.2f")
+Out(CS_Cementite, "	%6.2f", "	%5.2f")
 Out(wt_martensite, "	%6.2f", "	%5.2f")									 
+Out(CS_Martensite, "	%6.2f", "	%5.2f")
+Out(Disp, "	%6.2f", "	%5.2f")

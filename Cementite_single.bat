@@ -16,7 +16,7 @@ set resultname=Cementite-result
 echo %inpname% >> %param1%%resultname%.txt
 
 rem 結果ファイルの1行目に、各項目の見出しを書き込む（分かりやすくするため）
-echo FileName	Austenite(wt%%)	Austenite_error	Cementite(wt%%)	Cementite_error	Martensite(wt%%)	Martensite_error>> %param1%%resultname%.txt
+echo FileName	Austenite(wt%%)	Austenite_error	AusteniteCS(nm)	Austenite_error	Cementite(wt%%)	Cementite_error	CementiteCS(nm)	Cementite_error	Martensite(wt%%)	Martensite_error	MartensiteCS(nm)	Martensite_error>> %param1%%resultname%.txt
 
 rem .rawファイル名を順番に取得し、それぞれ解析を実行
 echo -----------------------ファイル名
@@ -32,3 +32,4 @@ for %%A in (*.raw) do (
 echo %param1%INP\%inpname%
 
 rem 解析時に一時的に作成された～.outファイルを削除する
+del %param1%%inpname%.out
