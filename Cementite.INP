@@ -27,9 +27,9 @@ RAW(FileName)
 		la  0.0503 lo  1.789879 lh  1
 		la  0.3516 lo  1.79285 lh  1
 	str 
-		LVol_FWHM_CS_G_L( 1, 4871.190388, 0.89, 6809.966692,,,cs_iron_gamma_austenite, 7651.647969_LIMIT_MIN_0.3)
-		e0_from_Strain( 0.003439538823,@, 1.576568464,,)
-		r_bragg  1.461518742
+		LVol_FWHM_CS_G_L( 1, 6179.321807, 0.89, 8638.745837,,,, 10000_LIMIT_MIN_0.3)
+		e0_from_Strain( 0.003435765123,@, 1.574838728,,)
+		r_bragg  1.465882805
 		phase_MAC 56.51577148
 		Apply_Brindley_Spherical_R_PD( 1e-005, 0.4)
 		phase_name "Iron gamma Austenite"
@@ -43,8 +43,8 @@ RAW(FileName)
 		site s1 num_posns 4 x =0; :  0 y =0; :  0 z =0; :  0 occ FE  0.950000127 beq  0.1 occ C  0.04999987304_LIMIT_MAX_0.05 max =0.05; beq  0.1
 		PO_Spherical_Harmonics(sh_54364b03_38, 4 load sh_Cij_prm { k00 !sh_54364b03_38_c00 1 k41 sh_54364b03_38_c41 -0.1289674167 } )
 	str 
-		LVol_FWHM_CS_G_L( 1, 16.89871825, 0.89, 23.62455566,,,@, 26.54444456_LIMIT_MIN_20 min =20; max =200;)
-		r_bragg  1.491735505
+		LVol_FWHM_CS_G_L( 1, 16.97881739, 0.89, 23.73653495,,,, 31_LIMIT_MIN_20 min =20; max =200;)
+		r_bragg  1.505966837
 		phase_MAC 53.72935082
 		Apply_Brindley_Spherical_R_PD( 1e-005, 0.4)
 		phase_name "Cementite"
